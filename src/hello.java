@@ -18,8 +18,22 @@ public class hello {
         if(A<100)
             System.out.println("you got the high score");
 
+        calulatescore(true , 40,4,5);
 
 
+
+
+
+
+
+    }
+    public static void calulatescore(boolean GameOver,int score ,int levelComplet , int bonus  ){
+
+        if(GameOver){
+            int finalScore=score + (levelComplet*bonus);
+            finalScore  +=1000;
+            System.out.println("your final score is " + finalScore);
+        }
 
 
 
