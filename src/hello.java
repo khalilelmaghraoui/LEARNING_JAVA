@@ -8,6 +8,17 @@ public class hello {
 
         long som = 50000+10*(A+b+c);
         System.out.println(som);
+        float cc = 5.4f;
+
+        boolean m= true;
+
+        String mystring= "khalil elmaghroauoi ";
+        System.out.println(mystring);
+
+        if(A<100)
+            System.out.println("you got the high score");
+
+
 
 
 
