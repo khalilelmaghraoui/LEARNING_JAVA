@@ -2,10 +2,10 @@ public class main {
     public static void main(String[] args) {
 
 
-        long value =number.toMilesPerHour(10.5);
+        long value =km_to_miles.toMilesPerHour(10.5);
         System.out.println("miles = "+value);
 
-        number.printconversion(10.5);
+        km_to_miles.printconversion(10.5);
 
     }
 }
