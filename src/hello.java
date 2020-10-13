@@ -45,10 +45,10 @@ public class hello {
         if (PlayerScore>=1000)
         {
             return 1;}
-        else if (PlayerScore>=500 && PlayerScore <1000){
+        else if (PlayerScore>=500 ){
             return 2;
         }
-        else if (PlayerScore>=100 && PlayerScore<500 )
+        else if (PlayerScore>=100  )
         {
             return 3;
 
