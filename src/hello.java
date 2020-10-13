@@ -5,11 +5,6 @@ public class hello {
         byte A = 64;
         short b= 2000;
         int c= 45;
-
-
-        String mystring= "khalil elmaghroauoi ";
-        System.out.println(mystring);
-
         if(A<100)
             System.out.println("you got the high score");
 
