@@ -1,6 +1,8 @@
 public class overloading {
 
+    private static final String INVALID_VALUE_MESSAGE="INVALID VALUE !"; // final means that we cannot change the value of the cst //
     public static void main(String[] args) {
+
 //        clculFeetAndInchesToCentimeter(6,6);
         clculFeetAndInchesToCentimeter(100);
 
@@ -15,7 +17,7 @@ public class overloading {
             return Cm;
         }
         else
-            System.out.println("invalid feet or inches");
+            System.out.println(INVALID_VALUE_MESSAGE);
             return -1;
 
     }
@@ -30,6 +32,7 @@ public class overloading {
            return clculFeetAndInchesToCentimeter(Feet,remainginches);
        }
         else
+           System.out.println(INVALID_VALUE_MESSAGE);
            return -1;
   }
 }
