@@ -1,11 +1,8 @@
+package com.ex5;
+
 public class Main {
 
     public static void main(String[] args) {
-
-        Car Ferarri = new Car();
-
-        Ferarri.setModel("2020");
-
-
+	// write your code here
     }
 }
