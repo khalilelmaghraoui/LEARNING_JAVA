@@ -1,4 +1,4 @@
-package com.JavaGenerics;
+package Challenge;
 
 public abstract class Player {
     private String name;
