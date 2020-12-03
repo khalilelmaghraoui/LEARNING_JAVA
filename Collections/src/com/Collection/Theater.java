@@ -8,8 +8,9 @@ import java.util.List;
 
 public class Theater {
     private final String theaterName;
-//    private List<Seat> seats = new ArrayList<Seat>();
-    private List<Seat>  seats = new ArrayList<>();
+
+    public List<Seat>  seats = new ArrayList<>();
+
 
     public Theater(String theaterName,int nbRows , int seatsPerRpw) {
         this.theaterName = theaterName;
@@ -29,19 +30,35 @@ public class Theater {
         return theaterName;
     }
     public boolean reserveSeat(String seatNumber){
-        Seat  requestedSeat = null;
-        for (Seat seat: seats) {
-            if(seat.getSeatNumber().equals(seatNumber)){
-                requestedSeat = seat;
-                break;
-            }
+        // for the second type
+        Seat requestedSeat = new Seat(seatNumber);
+        int foundSeat = Collections.binarySearch(seats,requestedSeat,null);
+        if(foundSeat >= 0 ){
+            return seats.get(foundSeat).reserve();
+        }
+        else {
+            System.out.println("there is no seat " + seatNumber);
+            return false;
 
         }
-        if (requestedSeat==null){
-            System.out.println("there is no seat"+seatNumber);
-            return false;
-        }
-        return requestedSeat.reserve();
+
+
+
+
+        // without binary search
+//        Seat  requestedSeat = null;
+//        for (Seat seat: seats) {
+//            if(seat.getSeatNumber().equals(seatNumber)){
+//                requestedSeat = seat;
+//                break;
+//            }
+
+//        }
+//        if (requestedSeat==null){
+//            System.out.println("there is no seat"+seatNumber);
+//            return false;
+//        }
+//        return requestedSeat.reserve();
 
     }
     public void getSeats(){
@@ -51,7 +68,7 @@ public class Theater {
 
         }
     }
-    private class Seat {
+    public class Seat implements Comparable<Seat> {
         private final String seatNumber;
         private boolean reserved=false;
 
@@ -80,6 +97,11 @@ public class Theater {
 
         public String getSeatNumber() {
             return seatNumber;
+        }
+
+        @Override
+        public int compareTo(Seat seat) {
+            return this.seatNumber.compareToIgnoreCase(seat.getSeatNumber());
         }
     }
 
