@@ -9,7 +9,7 @@ import java.util.List;
 public class Theater {
     private final String theaterName;
 
-    public List<Seat>  seats = new ArrayList<>();
+    private List<Seat>  seats = new ArrayList<>();
 
 
     public Theater(String theaterName,int nbRows , int seatsPerRpw) {
@@ -18,7 +18,15 @@ public class Theater {
         for(char row = 'A' ; row<=lastRow ; row++){
             for (int seatNum = 1 ; seatNum <= seatsPerRpw ; seatNum ++)
             {
-                Seat  seat = new Seat (row + String.format("%02d" , seatNum) );
+                double price =12;
+                if(row<'D' && (seatNum >=4 && seatNum<=9)) {
+                    price = 14.00;
+                }
+                else if (row>'F' || (seatNum <4 || seatNum >9)) {
+                price = 7.00;
+            }
+
+                 Seat  seat = new Seat (row + String.format("%02d" , seatNum),price );
                 seats.add(seat);
 
             }
@@ -29,9 +37,10 @@ public class Theater {
     public String getTheaterName() {
         return theaterName;
     }
+
     public boolean reserveSeat(String seatNumber){
         // for the second type
-        Seat requestedSeat = new Seat(seatNumber);
+        Seat requestedSeat = new Seat(seatNumber,0);
         int foundSeat = Collections.binarySearch(seats,requestedSeat,null);
         if(foundSeat >= 0 ){
             return seats.get(foundSeat).reserve();
@@ -61,19 +70,17 @@ public class Theater {
 //        return requestedSeat.reserve();
 
     }
-    public void getSeats(){
-        for (Seat seat: seats
-             ) {
-            System.out.println(seat.getSeatNumber());
-
-        }
+    public Collection<Seat> getSeat(){
+       return seats;
     }
     public class Seat implements Comparable<Seat> {
         private final String seatNumber;
+        private double price;
         private boolean reserved=false;
 
-        public Seat(String seatNumber) {
+        public Seat(String seatNumber, double price) {
             this.seatNumber = seatNumber;
+            this.price=price;
         }
         public boolean reserve(){
             if(!this.reserved){
@@ -102,6 +109,10 @@ public class Theater {
         @Override
         public int compareTo(Seat seat) {
             return this.seatNumber.compareToIgnoreCase(seat.getSeatNumber());
+        }
+
+        public double getPrice() {
+            return price;
         }
     }
 
