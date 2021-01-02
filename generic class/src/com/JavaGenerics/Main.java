@@ -16,6 +16,9 @@ public class Main {
     Team<FootballPlayer> maghraoui  = new Team<>("maghraoui team ");
     Team<FootballPlayer> dadi = new Team<>("dadi Team");
     Team<SoccerPlayer> soccerPlayerTeam = new Team<>("soccer Team");
+
+
+
 //    Team<String> stringTeam= new Team<String>("fa");
 
     maghraoui.addPlayer(khalil);

@@ -4,7 +4,7 @@ import com.JavaGenerics.Player;
 
 import java.util.ArrayList;
 
-public class Team<T extends Player> implements Comparable<Team<T>> {
+public  class Team<T extends Player> implements Comparable<Team<T>> {
     // if we have multiple bounds , we cant add interfaces like Team<T extends Player & interface1 & interface2
     private String name;
     int played = 0;
