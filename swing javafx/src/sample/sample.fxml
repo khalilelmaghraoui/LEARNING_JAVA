@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+      <Pane prefHeight="549.0" prefWidth="765.0" style="-fx-border-color: #173840; -fx-border-width: 10; -fx-background-color: #011C26;">
+
+         <children>
+            <BorderPane layoutX="41.0" layoutY="63.0" prefHeight="420.0" prefWidth="683.0" style="-fx-background-color: #173840; -fx-border-color: #BF1111;" />
+            <Button layoutX="208.0" layoutY="486.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="122.0" style="-fx-background-color: #8C1F1F;" text="SCREENSHOT" textFill="#f2f2f2" />
+            <Button layoutX="437.0" layoutY="486.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="122.0" style="-fx-background-color: #8C1F1F;" text="START CAMERA" textFill="#f2f2f2" />
+            <TextArea layoutX="269.0" layoutY="21.0" prefHeight="0.0" prefWidth="200.0" style="-fx-background-color: red;" text="       FACE DETECTION APP"/>
+         </children>
+      </Pane>
+   </children>
+</GridPane>
+
