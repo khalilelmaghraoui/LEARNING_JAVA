@@ -23,7 +23,12 @@ public class Main {
        // new panel();
 
         // button
-        new Button();
+     //   new Button();
+       // new radios();
+       // new flowLayout();
+
+      new Menu();
+       // new fenetre();
 
     }
 

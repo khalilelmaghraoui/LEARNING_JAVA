@@ -1,5 +1,6 @@
 package com.Collection;
 
+import java.lang.reflect.Array;
 import java.util.*;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -9,7 +10,14 @@ import java.util.List;
 public class Theater {
     private final String theaterName;
 
+
+
     private List<Seat>  seats = new ArrayList<>();
+    int[]y[][];
+    int tab[][] = {{1,2,3}, {4,5,6}, {7,8,9}, {10,11,12}};
+    int som = 0;
+    int i;
+
 
 
     public Theater(String theaterName,int nbRows , int seatsPerRpw) {
@@ -41,7 +49,9 @@ public class Theater {
     public boolean reserveSeat(String seatNumber){
         // for the second type
         Seat requestedSeat = new Seat(seatNumber,0);
+        Comparator
         int foundSeat = Collections.binarySearch(seats,requestedSeat,null);
+        requestedSeat.compareTo()
         if(foundSeat >= 0 ){
             return seats.get(foundSeat).reserve();
         }

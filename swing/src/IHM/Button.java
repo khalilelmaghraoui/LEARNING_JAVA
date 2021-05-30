@@ -7,6 +7,7 @@ import java.awt.*;
 public class Button extends JFrame {
     JButton button;
     JLabel label;
+    JButton button2;
 
 
      Button() {
@@ -27,14 +28,18 @@ public class Button extends JFrame {
 
 
          button = new JButton();
+         button2 = new JButton(imageIcon);
         button.setBounds(50,50,200,80);
+        button2.setBounds(100,100,200,80);
         button.setHorizontalTextPosition(JButton.CENTER);
         button.setVerticalTextPosition(JButton.BOTTOM);
         button.setText("heeeeeeello !");
+        button2.setText("heeeeeeello !");
         button.setFont(new Font("Nuvel",Font.ITALIC,25));
         button.setForeground(new Color(0x123456));
         button.setBorder(BorderFactory.createBevelBorder(4,Color.black,Color.ORANGE));
         button.setIcon(imageIcon);
+
 
         button.setFocusable(false);
        // button.setEnabled(false); for  disable a button
@@ -48,9 +53,10 @@ public class Button extends JFrame {
         frame.setLayout(null);
         frame.setSize(500,500);
          frame.add(button);
+         frame.add(button2);
 
 
 
     }
-    
+
 }

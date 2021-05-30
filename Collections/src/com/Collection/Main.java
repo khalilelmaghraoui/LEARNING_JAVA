@@ -5,27 +5,39 @@ package com.Collection;
 import java.util.*;
 
 
+public class Main{
 
-public class Main {
 
     public static void main(String[] args) {
-        // write your code here
-        Theater cinemaRif = new Theater("cinema Rif ", 8, 12);
+        Integer a= 2;
+        Integer b= 2;
+        System.out.println(a==b);
+        if(a==b){
+            System.out.println("mzian");
+        }
+        System.out.println("le restrs est ");
 
-//        List<Theater.Seat> copyList = new ArrayList<>(cinemaRif.seats);
-        if (cinemaRif.reserveSeat("D12")) {
-            System.out.println("Please pay for D12");
-        } else {
-            System.out.println("already reserved");
-        }
-        if (cinemaRif.reserveSeat("D13")) {
-            System.out.println("Please pay for D13");
-        } else {
-            System.out.println("already reserved");
-        }
-        List<Theater.Seat> ReverceCopy = new ArrayList<>(cinemaRif.getSeat());
-        Collections.reverse(ReverceCopy);
-        printLisst(ReverceCopy);
+//        int tab[]=new int[9];
+//        final int x;
+//        System.out.println(tab);
+//
+//
+//        Theater cinemaRif = new Theater("cinema Rif ", 8, 12);
+//
+////        List<Theater.Seat> copyList = new ArrayList<>(cinemaRif.seats);
+//        if (cinemaRif.reserveSeat("D12")) {
+//            System.out.println("Please pay for D12");
+//        } else {
+//            System.out.println("already reserved");
+//        }
+//        if (cinemaRif.reserveSeat("D13")) {
+//            System.out.println("Please pay for D13");
+//        } else {
+//            System.out.println("already reserved");
+//        }
+//        List<Theater.Seat> ReverceCopy = new ArrayList<>(cinemaRif.getSeat());
+//        Collections.reverse(ReverceCopy);
+//        printLisst(ReverceCopy);
 
 
 //        printLisst(copyList);
